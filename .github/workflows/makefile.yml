@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
 
 
@@ -86,14 +86,14 @@ jobs:
     
     
     - name: 上传 Anykernel3
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: GTNeo系列-ksu-lxc-docker-安卓13-mtk6893内核-卡刷包
         path: kernel_workspace/AnyKernel3/*
         
 
     - name: 上传编译内核
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: mtk6893内核-Image.gz
         path: kernel_workspace/android-kernel/out/arch/arm64/boot/Image.gz-dtb
