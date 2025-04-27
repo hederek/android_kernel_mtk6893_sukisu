@@ -44,18 +44,10 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/wu17481748/android_kernel_mtk6893 android-kernel
+        git clone https://github.com/hotianbexuanto/android_kernel_mtk6893_sukisu android-kernel
         cd android-kernel
 
 
-
-    - name: 更新 ksu
-      run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        rm -rf KernelSU
-        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s ${{ env.KERNELSU_TAG }}
-
-               
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
       with:
